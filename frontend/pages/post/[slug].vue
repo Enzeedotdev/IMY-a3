@@ -4,11 +4,12 @@ const route = useRoute()
 const response = await useFetch(
   `http://localhost:1337/api/blog-posts?filters[slug][$eq]=${route.params.slug}`
 )
-// Slugs are number IDs ranging from 1 to 5, at the moment there are only 5 posts in the database.
+// Slugs are number IDs ranging from 1 to 5 at the moment there are only 5 posts in the database.
+
 
 let post = null
 
-if (response.data.value && response.data.value.data.length > 0) {
+if (response.data.value &&  response.data.value.data.length > 0 ){
   post = response.data.value.data[0]
 }
 </script>
