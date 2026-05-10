@@ -57,6 +57,13 @@ function getFilteredPosts() {
 
 <template>
   <div class="mainOverview">
+    <NuxtLink
+      to="/search"
+      class="searchButton"
+    >
+      Go to Search Page
+    </NuxtLink>
+
     <h1>
       Blog Posts
     </h1>
@@ -78,3 +85,48 @@ function getFilteredPosts() {
   </div>
 </template>
 
+<style>
+body {
+  margin: 0;
+  background-color: #0f0f0f;
+  color: white;
+}
+
+.mainOverview {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+select {
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #333;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  width: 200px;
+}
+
+.searchButton {
+  display: inline-block;
+  margin-bottom: 30px;
+  background-color: #298dff;
+  text-decoration: none;
+  border: 1px solid #4ea1ff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+.searchButton:hover {
+  background-color: #75b6ff;
+  text-decoration: underline;
+}
+</style>
